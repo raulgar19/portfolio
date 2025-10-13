@@ -13,7 +13,7 @@
 }
 
 .skills h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 3rem;
 }
 
@@ -21,7 +21,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 7rem;
+  gap: 5rem;
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -32,7 +32,7 @@
 }
 
 .skills-group h3 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin-bottom: 1.5rem;
   border-bottom: 2px solid currentColor;
   display: inline-block;
@@ -55,15 +55,15 @@
 }
 
 .skill-item img {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   object-fit: contain;
   margin-bottom: 0.5rem;
   transition: transform 0.3s ease;
 }
 
 .skill-item p {
-  font-size: 1.1rem;
+  font-size: 0.8rem;
   font-weight: 600;
   margin: 0;
 }

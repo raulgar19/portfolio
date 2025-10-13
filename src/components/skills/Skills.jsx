@@ -29,8 +29,8 @@ function Skills() {
                   borderRadius: 10,
                   marginTop: 10,
                   marginBottom: 18,
-                  width: 80,
-                  height: 80,
+                  width: 65,
+                  height: 65,
                 }}
               />
               <p>.NET</p>
@@ -43,8 +43,8 @@ function Skills() {
                   borderRadius: 10,
                   marginTop: 10,
                   marginBottom: 18,
-                  width: 80,
-                  height: 80,
+                  width: 65,
+                  height: 65,
                 }}
               />
               <p>JavaScript</p>
@@ -69,8 +69,8 @@ function Skills() {
                   borderRadius: 10,
                   marginTop: 10,
                   marginBottom: 18,
-                  width: 80,
-                  height: 80,
+                  width: 65,
+                  height: 65,
                 }}
               />
               <p>JQuery</p>
@@ -83,8 +83,8 @@ function Skills() {
                   borderRadius: 10,
                   marginTop: 10,
                   marginBottom: 18,
-                  width: 80,
-                  height: 80,
+                  width: 65,
+                  height: 65,
                 }}
               />
               <p>Python</p>
@@ -100,9 +100,9 @@ function Skills() {
                 style={{
                   borderRadius: 10,
                   marginTop: 10,
-                  marginBottom: 18,
-                  width: 80,
-                  height: 80,
+                  marginBottom: 12,
+                  width: 65,
+                  height: 65,
                 }}
               />
               <p>PostgreSQL</p>
@@ -129,8 +129,8 @@ function Skills() {
                   borderRadius: 5,
                   marginTop: 5,
                   marginBottom: 12,
-                  width: 90,
-                  height: 90,
+                  width: 71,
+                  height: 71,
                 }}
               />
               <p>Android Studio</p>
@@ -143,8 +143,8 @@ function Skills() {
                   borderRadius: 10,
                   marginTop: 10,
                   marginBottom: 18,
-                  width: 80,
-                  height: 80,
+                  width: 60,
+                  height: 60,
                 }}
               />
               <p>IntelliJ Idea</p>
@@ -157,8 +157,8 @@ function Skills() {
                   borderRadius: 10,
                   marginTop: 10,
                   marginBottom: 18,
-                  width: 80,
-                  height: 80,
+                  width: 65,
+                  height: 65,
                 }}
               />
               <p>Unity</p>
@@ -171,8 +171,8 @@ function Skills() {
                   borderRadius: 10,
                   marginTop: 8,
                   marginBottom: 15,
-                  width: 85,
-                  height: 85,
+                  width: 67,
+                  height: 67,
                 }}
               />
               <p>Git</p>
@@ -185,8 +185,8 @@ function Skills() {
                   borderRadius: 10,
                   marginTop: 8,
                   marginBottom: 15,
-                  width: 85,
-                  height: 85,
+                  width: 67,
+                  height: 67,
                 }}
               />
               <p>Github</p>
@@ -211,8 +211,8 @@ function Skills() {
                   borderRadius: 10,
                   marginTop: 10,
                   marginBottom: 18,
-                  width: 80,
-                  height: 80,
+                  width: 61,
+                  height: 61,
                 }}
               />
               <p>Microsoft PowerApps</p>

@@ -5,18 +5,18 @@
 }
 
 .contact h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 1.5rem;
 }
 
 .contact p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-bottom: 1rem;
 }
 
 .contact-info p {
   margin: 0.5rem 0;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
 }
 
 .light-mode .contact-info a {
