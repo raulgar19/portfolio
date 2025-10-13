@@ -5,10 +5,12 @@ import UndeadHuntPage from "./pages/projectsPages/undeadHunt/UndeadHuntPage";
 import MyPetsHealthHubPage from "./pages/projectsPages/myPetsHealthHub/MyPetsHealthHubPage";
 import EchoPlayPage from "./pages/projectsPages/echoPlay/EchoPlayPage";
 import "./App.css";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/project/money-minder" element={<MoneyMinderPage />} />
