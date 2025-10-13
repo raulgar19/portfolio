@@ -1,0 +1,195 @@
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  max-width: 1100px; /* 🔥 más ancho */
+  max-height: 500px; /* alto máximo */
+  margin: 2rem auto; /* centrado horizontal y margen superior/inferior */
+  border-radius: 20px; /* bordes redondeados */
+  transition: background 0.5s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* sombra suave para destacarlo */
+}
+
+.light-mode .hero {
+  background: linear-gradient(135deg, #e9fff7 0%, #fffef5 100%);
+}
+
+.dark-mode .hero {
+  background: linear-gradient(135deg, #1b1b2f 0%, #0f3d3e 100%);
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  color: gray;
+  transition: color 0.5s ease;
+}
+
+/* Imagen */
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-image img {
+  width: 300px; /* tamaño más grande */
+  height: auto; /* mantiene proporción */
+  border-radius: 25px; /* bordes redondeados */
+  object-fit: cover;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.light-mode .hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 2px;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    #66d9a3,
+    transparent,
+    #9ef7c9
+  );
+  background-size: 300% 300%;
+  animation: reactBorderBlue 6s linear infinite;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.dark-mode .hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 2px;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    #a78bfa,
+    transparent,
+    #7dd3fc
+  );
+  background-size: 300% 300%;
+  animation: reactBorderRed 6s linear infinite;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Cambiar color según el modo */
+.light-mode .hero-content h1 {
+  color: #0b3d2e;
+}
+
+.dark-mode .hero-content h1 {
+  color: #f1f5f9;
+}
+
+.hero-buttons {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.hero-button {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.light-mode .hero-button {
+  background-color: #66d9a3;
+  color: #0b3d2e;
+}
+
+.light-mode .hero-button:hover {
+  background-color: #52c08b;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode .hero-button {
+  background-color: #7c3aed;
+  color: #f8fafc;
+}
+
+.dark-mode .hero-button:hover {
+  background-color: #9f67ff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+}
+
+/* Animaciones */
+@keyframes reactBorderBlue {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes reactBorderRed {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .hero {
+    max-width: 90%;
+    max-height: 300px;
+    padding: 1.5rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+
+  .hero-image img {
+    width: 200px;
+    height: auto;
+    max-height: 250px;
+  }
+}

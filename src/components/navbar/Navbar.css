@@ -1,0 +1,138 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 0 3rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: background-color 0.3s ease, border-color 0.3s ease,
+    color 0.3s ease;
+}
+
+/* Logo a la izquierda */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+/* Enlaces centrados horizontalmente */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  flex: 2;
+}
+
+/* Botón del modo a la derecha */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+/* Logo */
+.navbar-logo-link {
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  display: inline-block;
+}
+
+.navbar-logo-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* un poco abajo del texto */
+  height: 4px;
+  width: 0%;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+
+.navbar-logo-link:hover::after {
+  width: 100%;
+}
+
+.navbar-logo {
+  font-size: 2.9rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Enlaces */
+.navbar-links a {
+  text-decoration: none;
+  color: inherit; /* se heredará del navbar según el modo */
+  font-weight: 600;
+  font-size: 1.5rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+/* Línea inferior animada */
+.navbar-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -36px;
+  height: 4px;
+  width: 0%;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+
+.navbar-links a:hover::after {
+  width: 100%;
+}
+
+/* Botón del modo */
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.theme-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.theme-toggle svg {
+  width: 30px;
+  height: 30px;
+}
+
+/* Modo oscuro */
+.dark-mode .navbar {
+  background-color: #252f3e; /* gris antracita oscuro */
+  border-color: #3b4759; /* línea sutil */
+  color: #f1f5f9; /* texto claro */
+}
+
+/* Hover del toggle en oscuro */
+.dark-mode .theme-toggle:hover {
+  background-color: rgba(241, 245, 249, 0.1);
+}
+
+/* Modo claro */
+.light-mode .navbar {
+  background-color: #f9f7f7; /* gris crema */
+  border-color: #e0e0e0; /* línea sutil */
+  color: #1a1a1a; /* texto oscuro */
+}
+
+/* Hover del toggle en claro */
+.light-mode .theme-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}

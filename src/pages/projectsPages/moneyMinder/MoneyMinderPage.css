@@ -1,0 +1,232 @@
+/* Fondo */
+.mm-page {
+  min-height: 100vh;
+  transition: background-color 0.3s ease;
+}
+
+.light-mode .mm-page {
+  background: linear-gradient(160deg, #e6f0ff 0%, #b3d1ff 100%);
+  color: #1a1a1a;
+}
+
+.dark-mode .mm-page {
+  background: linear-gradient(160deg, #0f172a 0%, #1e293b 40%, #334155 100%);
+  color: #f1f5f9;
+}
+
+/* Sección principal */
+.mm-details {
+  max-width: 1400px;
+  margin: 3rem auto;
+  padding: 2rem;
+  border-radius: 15px;
+  transition: background 0.5s ease, color 0.5s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  flex-wrap: wrap;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.light-mode .mm-details {
+  background: linear-gradient(135deg, #e9fff7 0%, #fffef5 100%);
+}
+
+.dark-mode .mm-details {
+  background: linear-gradient(135deg, #1b1b2f 0%, #0f3d3e 100%);
+}
+
+/* Bordes animados */
+.light-mode .mm-details::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 15px;
+  padding: 2px;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    #66d9a3,
+    transparent,
+    #9ef7c9
+  );
+  background-size: 300% 300%;
+  animation: mmBorderBlue 6s linear infinite;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.dark-mode .mm-details::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 15px;
+  padding: 2px;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    #a78bfa,
+    transparent,
+    #7dd3fc
+  );
+  background-size: 300% 300%;
+  animation: mmBorderRed 6s linear infinite;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Animaciones */
+@keyframes mmBorderBlue {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes mmBorderRed {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Texto */
+.mm-text {
+  flex: 1;
+}
+
+.light-mode .mm-details h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.mm-description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Lista */
+.mm-version-list {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+  list-style: square;
+  font-size: 1.1rem;
+}
+
+.light-mode .mm-version-list li {
+  color: #222;
+}
+
+.dark-mode .mm-version-list li {
+  color: #f5f5f5;
+}
+
+/* Botones */
+.mm-buttons {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.mm-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mm-column h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.mm-btn {
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.light-mode .mm-btn {
+  background-color: #66d9a3;
+  color: #0b3d2e;
+}
+
+.light-mode .mm-btn:hover {
+  background-color: #52c08b;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode .mm-btn {
+  background-color: #7c3aed;
+  color: #f8fafc;
+}
+
+.dark-mode .mm-btn:hover {
+  background-color: #9f67ff;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+}
+
+/* Video */
+.mm-video video {
+  width: auto;
+  height: 850px;
+  max-width: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+/* Colores fondo */
+.light-mode .mm-details {
+  background-color: #ffffff;
+  color: #222;
+}
+
+.dark-mode .mm-details {
+  background-color: #2c2c2c;
+  color: #f5f5f5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .mm-details {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .mm-text,
+  .mm-video {
+    flex: unset;
+    width: 100%;
+  }
+
+  .mm-buttons {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}

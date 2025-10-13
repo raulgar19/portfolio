@@ -1,0 +1,171 @@
+.projects-container {
+  padding: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.projects-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  width: 250px;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+    background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Fondos y colores según el modo */
+.light-mode .project-card {
+  background-color: #ffffff;
+  border: 1px solid #e0cbb0; /* tono cálido que combina con el fondo crema */
+  color: #1a1a1a;
+}
+
+.dark-mode .project-card {
+  background: linear-gradient(145deg, #2a2438 0%, #1e1a29 100%);
+  border: 1px solid #3d3250; /* borde sutil púrpura-grisáceo */
+  color: #f1f1f1;
+}
+
+/* Hover con leve brillo */
+.light-mode .project-card:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.dark-mode .project-card:hover {
+  box-shadow: 0 6px 16px rgba(200, 120, 255, 0.25);
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.projects-container h2 {
+  text-align: center; /* centra el título */
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  transition: color 0.3s ease;
+}
+
+/* Cambiar color según modo */
+.light-mode .projects-container h2 {
+  color: #000;
+}
+
+.dark-mode .projects-container h2 {
+  color: #fff;
+}
+
+.project-card h3 {
+  margin-top: 12px;
+}
+
+.project-card p {
+  margin: 8px 0 12px;
+}
+
+.light-mode .project-card a {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: #6a1b9a;
+  color: #fff;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.dark-mode .project-card a {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: #80cbc4;
+  color: #1a1a1a;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.light-mode .project-card a:hover {
+  background-color: #9c27b0;
+}
+
+.dark-mode .project-card a:hover {
+  background-color: #4db6ac;
+}
+
+.project-card {
+  width: 250px;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  position: relative; /* necesario para el pseudo-elemento */
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+    background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Pseudo-elemento para borde animado */
+.project-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  padding: 2px;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 0;
+  background: none; /* Eliminamos cualquier degradado animado */
+}
+
+/* Bordes estáticos por modo */
+.light-mode .project-card::before {
+  background: linear-gradient(145deg, #9be7ff, #c4b5fd); /* turquesa a malva */
+}
+
+.dark-mode .project-card::before {
+  background: linear-gradient(145deg, #a26bfa, #7b4ec7); /* violeta profundo */
+}
+
+/* Aseguramos que el contenido esté por encima del borde */
+.project-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Animaciones */
+@keyframes borderBlue {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes borderRed {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

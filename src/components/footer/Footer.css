@@ -1,0 +1,35 @@
+.footer {
+  padding: 1rem 2rem; /* menos alto */
+  text-align: center;
+  transition: background 0.5s ease, color 0.5s ease;
+  font-weight: 600;
+  font-size: 1.2rem;
+  border-top: 1px solid;
+}
+
+.footer-subtitle {
+  margin-top: 0.3rem; /* un poco más pegado al nombre */
+  font-weight: 400;
+  font-size: 1rem;
+  color: gray;
+}
+
+.light-mode .footer {
+  background-color: #f9f7f7;
+  border-color: #e0e0e0;
+  color: #1a1a1a;
+}
+
+.light-mode .footer .footer-subtitle {
+  color: #555;
+}
+
+.dark-mode .footer {
+  background-color: #252f3e;
+  border-color: #3b4759;
+  color: #f1f5f9;
+}
+
+.dark-mode .footer .footer-subtitle {
+  color: #aaa;
+}
