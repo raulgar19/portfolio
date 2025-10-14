@@ -43,8 +43,9 @@
 }
 
 .project-card img {
-  width: 100%;
-  height: auto;
+  margin: auto;
+  width: 200px;
+  height: 200px;
   display: block;
   border-radius: 12px;
   object-fit: cover;
@@ -68,11 +69,14 @@
 }
 
 .project-card h3 {
-  margin-top: 12px;
+  margin-top: 10px;
+  font-size: 1rem;
 }
 
 .project-card p {
-  margin: 8px 0 12px;
+  margin: 6px 0 10px;
+  font-size: 0.85rem;
+  line-height: 1.3;
 }
 
 .light-mode .project-card a {

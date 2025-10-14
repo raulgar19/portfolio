@@ -16,7 +16,7 @@
 
 /* Sección principal */
 .mm-details {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 3rem auto;
   padding: 2rem;
   border-radius: 15px;
@@ -25,7 +25,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10rem;
+  gap: 5rem;
   flex-wrap: wrap;
   text-align: left;
   position: relative;
@@ -117,12 +117,12 @@
 }
 
 .light-mode .mm-details h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
 }
 
 .mm-description {
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.6;
 }
 
@@ -131,7 +131,7 @@
   margin-top: 1rem;
   padding-left: 1.5rem;
   list-style: square;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .light-mode .mm-version-list li {
@@ -144,10 +144,10 @@
 
 /* Botones */
 .mm-buttons {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1.5rem;
   justify-content: center;
 }
 
@@ -159,16 +159,17 @@
 }
 
 .mm-column h4 {
-  margin-bottom: 0.5rem;
-  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+  font-size: 1rem;
   font-weight: 600;
 }
 
 .mm-btn {
-  padding: 0.8rem 1.5rem;
+  padding: 0.6rem 1.2rem;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
+  font-size: 0.9rem;
   transition: background 0.3s ease, color 0.3s ease;
 }
 
@@ -195,7 +196,7 @@
 /* Video */
 .mm-video video {
   width: auto;
-  height: 850px;
+  height: 650px;
   max-width: 100%;
   border-radius: 15px;
   object-fit: cover;
@@ -228,5 +229,8 @@
   .mm-buttons {
     flex-direction: column;
     gap: 1.5rem;
+  }
+  .mm-video video {
+    height: 350px;
   }
 }

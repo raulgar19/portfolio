@@ -1,5 +1,5 @@
 .footer {
-  padding: 1rem 2rem; /* menos alto */
+  padding: 0.5rem 1rem; /* menos alto */
   text-align: center;
   transition: background 0.5s ease, color 0.5s ease;
   font-weight: 600;
@@ -8,7 +8,7 @@
 }
 
 .footer-subtitle {
-  margin-top: 0.3rem; /* un poco más pegado al nombre */
+  margin-top: 0.1rem;
   font-weight: 400;
   font-size: 0.8rem;
   color: gray;
