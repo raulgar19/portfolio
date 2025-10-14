@@ -22,8 +22,9 @@ const Projects = () => {
           <img src="undead-hunt.png" alt="Undead Hunt" />
           <h3>Undead Hunt</h3>
           <p>
-            Proyecto de fin de curso de Desarrollo de Videojuegos: un juego
-            basado en el modo zombies de la famosa saga Call of Duty.
+            Proyecto de fin de curso de Desarrollo de Videojuegos: un juego tipo
+            shooter PVE basado en el modo zombies de la famosa saga Call of
+            Duty.
           </p>
           <Link to="/project/undead-hunt">Más información</Link>
         </div>
