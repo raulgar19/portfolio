@@ -1,39 +1,39 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import ProjectNavbar from "../../../components/projectNavbar/ProjectNavbar";
 import Footer from "../../../components/footer/Footer";
 import "./UndeadHuntPage.css";
 
 function UndeadHuntPage() {
+  const { t } = useTranslation();
+
+  const video = t("undeadHuntPage.video", { returnObjects: true });
+  const buttons = t("undeadHuntPage.buttons", { returnObjects: true });
+
   return (
     <div className="uh-page">
       <ProjectNavbar />
 
       <section className="uh-details">
         <div className="uh-text">
-          <h1>Undead Hunt</h1>
+          <h1>{t("undeadHuntPage.title")}</h1>
           <p className="uh-description">
-            <strong>Undead Hunt</strong> es un videojuego desarrollado como
-            proyecto final del curso de Desarrollo de Videojuegos y Realidad
-            Virtual. Inspirado en el modo zombies de la saga{" "}
-            <em>Call of Duty</em>, este título combina acción intensa con una
-            ambientación oscura y desafiante.
+            <strong>{t("undeadHuntPage.title")}</strong>{" "}
+            {t("undeadHuntPage.description.part1")}
+            <em>Call of Duty</em>
+            {t("undeadHuntPage.description.part2")}
             <br />
             <br />
-            El jugador debe sobrevivir a oleadas infinitas de enemigos,
-            mejorando sus habilidades y estrategias con cada ronda. Desarrollado
-            con <strong>Unity</strong> y <strong>C#</strong>, el juego integra
-            sistemas de IA, generación de oleadas, puntuación y niveles de la
-            Asset Store, junto con un acabado cinematográfico mediante vídeos
-            editados manualmente.
+            {t("undeadHuntPage.description.part3")}
             <br />
-            <br />A continuación se muestra el tráiler del videojuego, junto con
-            su documentación, el proyecto y la versión compilada del mismo.
+            <br />
+            {t("undeadHuntPage.description.part4")}
           </p>
 
           <div className="uh-video">
             <iframe
-              src="https://drive.google.com/file/d/1yWLk210XMfLWtvoTJaf7qGbcP5yOxJEC/preview"
-              title="Undead Hunt Trailler"
+              src={video.src}
+              title={video.title}
               width="640"
               height="360"
               allow="autoplay; fullscreen"
@@ -43,28 +43,28 @@ function UndeadHuntPage() {
 
           <div className="uh-buttons">
             <a
-              href="https://drive.google.com/file/d/10riAeF8hr1Ykz9LUNr3FuEaId9Storch/view?usp=sharing"
+              href={buttons.project}
               target="_blank"
               rel="noopener noreferrer"
               className="uh-btn"
             >
-              Proyecto
+              {t("undeadHuntPage.buttons.project")}
             </a>
             <a
-              href="https://drive.google.com/file/d/1yGrErX1n8aHhcNk8iCiwDuF3ifL5lQvI/view?usp=sharing"
+              href={buttons.compiled}
               target="_blank"
               rel="noopener noreferrer"
               className="uh-btn"
             >
-              Versión compilada
+              {t("undeadHuntPage.buttons.compiled")}
             </a>
             <a
-              href="/docs/undeadhunt/undead-hunt-gdd.pdf"
+              href={buttons.documentation}
               target="_blank"
               rel="noopener noreferrer"
               className="uh-btn"
             >
-              Documentación
+              {t("undeadHuntPage.buttons.documentation")}
             </a>
           </div>
         </div>

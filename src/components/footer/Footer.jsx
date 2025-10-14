@@ -1,10 +1,13 @@
 import "./Footer.css";
+import { useTranslation } from "react-i18next";
 
 function Footer() {
+  const { t } = useTranslation();
+
   return (
     <footer className="footer">
-      <p>© Raúl García Muñoz</p>
-      <p className="footer-subtitle">Desarrollado con React</p>
+      <p>{t("copyright")}</p>
+      <p className="footer-subtitle">{t("subtitle")}</p>
     </footer>
   );
 }

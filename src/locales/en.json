@@ -1,0 +1,391 @@
+{
+  "navbar": {
+    "about": "About Me",
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact"
+  },
+  "hero": {
+    "name": "Raúl García Muñoz",
+    "subtitle": "Full Stack Web & Platform Developer",
+    "github": "Github",
+    "cv": "CV",
+    "imageAlt": "Hero Illustration"
+  },
+  "about": {
+    "title": "About Me",
+    "paragraph1": "Hello, I’m <1>Raúl García Muñoz</1>, a Full Stack developer specialized in web and cross-platform applications. I’m passionate about creating functional and efficient solutions that provide a smooth user experience.",
+    "paragraph2": "I have also explored game development with <1>Unity</1> through an intensive course, which allowed me to broaden my perspective in programming and interactive system design."
+  },
+  "projects": {
+    "title": "My Projects",
+    "moreInfo": "More Info",
+    "moneyMinder": {
+      "title": "Money Minder",
+      "description": "Final project of the Multiplatform Applications Development degree: a banking-style app that manages and tracks the user's different incomes and expenses."
+    },
+    "undeadHunt": {
+      "title": "Undead Hunt",
+      "description": "End-of-course Game Development project: a third-person PVE shooter game based on the zombies mode of the famous Call of Duty franchise."
+    },
+    "myPetsHealthHub": {
+      "title": "My Pet's Health Hub",
+      "description": "Final project of Web Applications Development: a platform that manages pets, veterinarians, and other functionalities and services related to pets."
+    },
+    "echoPlay": {
+      "title": "EchoPlay",
+      "description": "Personal music streaming project similar to Spotify: allows creating playlists, playing songs, and managing music interactively."
+    }
+  },
+  "skills": {
+    "title": "Skills",
+    "technologies": {
+      "title": "Technologies",
+      "items": [
+        { "name": "Java", "img": "java.png", "alt": "Java" },
+        { "name": "Kotlin", "img": "kotlin.png", "alt": "Kotlin" },
+        { "name": "C#", "img": "csharp.png", "alt": "C#" },
+        {
+          "name": ".NET",
+          "img": "dotnet.png",
+          "alt": ".NET",
+          "style": {
+            "borderRadius": 10,
+            "marginTop": 10,
+            "marginBottom": 18,
+            "width": 65,
+            "height": 65
+          }
+        },
+        {
+          "name": "JavaScript",
+          "img": "javascript.png",
+          "alt": "JavaScript",
+          "style": {
+            "borderRadius": 10,
+            "marginTop": 10,
+            "marginBottom": 18,
+            "width": 65,
+            "height": 65
+          }
+        },
+        { "name": "React / React Native", "img": "react.png", "alt": "React" },
+        { "name": "Angular", "img": "angular.png", "alt": "Angular" },
+        { "name": "Vue.js", "img": "vue.png", "alt": "Vue.js" },
+        {
+          "name": "JQuery",
+          "img": "jquery.png",
+          "alt": "JQuery",
+          "style": {
+            "borderRadius": 10,
+            "marginTop": 10,
+            "marginBottom": 18,
+            "width": 65,
+            "height": 65
+          }
+        },
+        {
+          "name": "Python",
+          "img": "python.png",
+          "alt": "Python",
+          "style": {
+            "borderRadius": 10,
+            "marginTop": 10,
+            "marginBottom": 18,
+            "width": 65,
+            "height": 65
+          }
+        },
+        { "name": "SQL Server", "img": "sqlserver.png", "alt": "SQL Server" },
+        {
+          "name": "PostgreSQL",
+          "img": "postgresql.png",
+          "alt": "PostgreSQL",
+          "style": {
+            "borderRadius": 10,
+            "marginTop": 10,
+            "marginBottom": 12,
+            "width": 65,
+            "height": 65
+          }
+        }
+      ]
+    },
+    "ides": {
+      "title": "IDEs & Applications",
+      "items": [
+        { "name": "VS Code", "img": "vscode.png", "alt": "VS Code" },
+        {
+          "name": "Visual Studio",
+          "img": "visualstudio.png",
+          "alt": "Visual Studio"
+        },
+        {
+          "name": "Android Studio",
+          "img": "androidstudio.png",
+          "alt": "Android Studio",
+          "style": {
+            "borderRadius": 5,
+            "marginTop": 5,
+            "marginBottom": 12,
+            "width": 71,
+            "height": 71
+          }
+        },
+        {
+          "name": "IntelliJ Idea",
+          "img": "intellij.png",
+          "alt": "IntelliJ Idea",
+          "style": {
+            "borderRadius": 10,
+            "marginTop": 10,
+            "marginBottom": 18,
+            "width": 60,
+            "height": 60
+          }
+        },
+        {
+          "name": "Unity",
+          "img": "unity.png",
+          "alt": "Unity",
+          "style": {
+            "borderRadius": 10,
+            "marginTop": 10,
+            "marginBottom": 18,
+            "width": 65,
+            "height": 65
+          }
+        },
+        {
+          "name": "Git",
+          "img": "git.png",
+          "alt": "Git",
+          "style": {
+            "borderRadius": 10,
+            "marginTop": 8,
+            "marginBottom": 15,
+            "width": 67,
+            "height": 67
+          }
+        },
+        {
+          "name": "Github",
+          "img": "github.png",
+          "alt": "Github",
+          "style": {
+            "borderRadius": 10,
+            "marginTop": 8,
+            "marginBottom": 15,
+            "width": 67,
+            "height": 67
+          }
+        },
+        { "name": "Docker", "img": "docker.png", "alt": "Docker" },
+        { "name": "DBeaver", "img": "dbeaver.png", "alt": "DBeaver" },
+        { "name": "Postman", "img": "postman.png", "alt": "Postman" },
+        {
+          "name": "Microsoft PowerApps",
+          "img": "powerapps.png",
+          "alt": "Microsoft PowerApps",
+          "style": {
+            "borderRadius": 10,
+            "marginTop": 10,
+            "marginBottom": 18,
+            "width": 61,
+            "height": 61
+          }
+        }
+      ]
+    }
+  },
+  "title": "Contact",
+  "description": "You can get in touch with me through the following channels:",
+  "email": "Email",
+  "linkedin": "LinkedIn",
+  "github": "GitHub",
+  "linkedinUrl": "https://www.linkedin.com/in/raúl-garcía-muñoz-595974263",
+  "githubUrl": "https://github.com/raulgar19",
+  "copyright": "© Raúl García Muñoz",
+  "subtitle": "Built with React",
+  "moneyMinderPage": {
+    "title": "Money Minder",
+    "description": "Money Minder is the final project of the Multiplatform Application Development degree, designed to facilitate personal financial management. The application allows users to register their income and expenses and classify them by categories to track their finances. It also includes various charts to make it easier and more visual to see the user's financial trajectory.",
+    "versionsTitle": "This project has 3 versions:",
+    "versions": [
+      {
+        "name": "Normal",
+        "links": {
+          "frontend": "https://github.com/raulgar19/MoneyMinderApp",
+          "backend": "https://github.com/raulgar19/MoneyMinderService"
+        }
+      },
+      {
+        "name": "Security",
+        "links": {
+          "frontend": "https://github.com/raulgar19/MoneyMinderAppWithSecurity",
+          "backend": "https://github.com/raulgar19/MoneyMinderServiceWithSecurity"
+        }
+      },
+      {
+        "name": "SpringSecurity",
+        "links": {
+          "frontend": "https://github.com/raulgar19/MoneyMinderAppWithSpringSecurity",
+          "backend": "https://github.com/raulgar19/MoneyMinderServiceWithSpringSecurity"
+        }
+      }
+    ],
+    "buttons": {
+      "frontend": "Frontend",
+      "backend": "Backend"
+    },
+    "documentation": {
+      "title": "Documentation",
+      "memory": "Report",
+      "manual": "Manual"
+    },
+    "video": {
+      "src": "/money-minder.mp4",
+      "alt": "Money Minder Video"
+    }
+  },
+  "undeadHuntPage": {
+    "title": "Undead Hunt",
+    "description": {
+      "part1": "is a video game developed as the final project for the Video Game Development and Virtual Reality course. Inspired by the zombies mode of the ",
+      "part2": " saga, this title combines intense action with a dark and challenging atmosphere.",
+      "part3": "The player must survive endless waves of enemies, improving their skills and strategies each round. Developed with ",
+      "part4": " and C#, the game integrates AI systems, wave generation, scoring, and Asset Store levels, along with cinematic finishing using manually edited videos. Below you can see the game trailer, its documentation, the project, and the compiled version."
+    },
+    "video": {
+      "src": "https://drive.google.com/file/d/1yWLk210XMfLWtvoTJaf7qGbcP5yOxJEC/preview",
+      "title": "Undead Hunt Trailer"
+    },
+    "buttons": {
+      "project": "Project",
+      "compiled": "Compiled version",
+      "documentation": "Documentation"
+    }
+  },
+  "myPetsHealthHubPage": {
+    "title": "My Pet's Health Hub",
+    "description": {
+      "part1": "My Pet’s Health Hub is a platform designed to facilitate the care and management of pets' health. Owners can register information about their animals, save medical histories, track vaccinations, medications, and upcoming vet visits.",
+      "part2": "Veterinarians can also easily access each pet's data, schedule appointments, review records, and keep everything organized in one place."
+    },
+    "video": {
+      "src": "/mphh-video.mp4",
+      "fallback": "Your browser does not support video playback."
+    },
+    "columns": [
+      {
+        "title": "Web",
+        "description": "The main website where users can manage all their pets' information comfortably and visually from a browser.",
+        "buttons": [
+          {
+            "label": "View Web",
+            "href": "https://mypetshealthhub.netlify.app/"
+          },
+          {
+            "label": "Web Repository",
+            "href": "https://github.com/raulgar19/MyPetsHealthHubWeb"
+          }
+        ]
+      },
+      {
+        "title": "Application",
+        "description": "Mobile and web version of the platform, designed for access via phone or browser, with a simple and fast experience for owners and vets.",
+        "buttons": [
+          {
+            "label": "View App in Browser",
+            "href": "https://my-pets-health-hub--50u6ech80q.expo.app/"
+          },
+          {
+            "label": "App / APK Repository",
+            "href": "https://github.com/raulgar19/MyPetsHealthHub"
+          }
+        ]
+      },
+      {
+        "title": "Server",
+        "description": "This system connects the web and mobile versions, managing data and ensuring the security of each user and pet's information.",
+        "buttons": [
+          {
+            "label": "Server Repository",
+            "href": "https://github.com/raulgar19/MyPetsHealthHubAPI"
+          }
+        ]
+      }
+    ],
+    "documentation": {
+      "label": "Documentation",
+      "href": "/docs/mypetshealthhub/memoria.pdf"
+    }
+  },
+  "echoPlayPage": {
+    "title": "Echo Play",
+    "description": {
+      "part1": "Echo Play is an application ecosystem designed for music management and playback within a local network. It consists of a central server and three client applications that communicate with it.",
+      "part2": "Thanks to this modular structure, each component has a specific role, ensuring efficient communication and a smooth experience on both desktop and mobile devices."
+    },
+    "images": [
+      {
+        "src": "/echoplay-app.png",
+        "alt": "Echo Play App",
+        "className": "side-image app-image",
+        "style": { "width": 215 }
+      },
+      {
+        "src": "/echoplay-upload.png",
+        "alt": "Echo Play Upload",
+        "className": "center-image"
+      },
+      {
+        "src": "/echoplay-manager.png",
+        "alt": "Echo Play Manager",
+        "className": "side-image"
+      }
+    ],
+    "columns": [
+      {
+        "title": "Kotlin App",
+        "description": "Android application developed in Kotlin acting as the main player, connecting to the server to stream available songs.",
+        "buttons": [
+          {
+            "label": "Repository / APK",
+            "href": "https://github.com/raulgar19/EchoPlayFrontend"
+          }
+        ]
+      },
+      {
+        "title": "Echo Play Upload",
+        "description": "Desktop application in C# that allows uploading songs and covers to the server from a local machine, keeping the music library updated and organized.",
+        "buttons": [
+          {
+            "label": "Repository / ZIP",
+            "href": "https://github.com/raulgar19/EchoPlayUploader"
+          }
+        ]
+      },
+      {
+        "title": "Echo Play Manager",
+        "description": "Administrative application in C# for managing the server, users, and playlists, providing full control over the music environment.",
+        "buttons": [
+          {
+            "label": "Repository / ZIP",
+            "href": "https://github.com/raulgar19/EchoPlayManager"
+          }
+        ]
+      },
+      {
+        "title": "Server",
+        "description": "Server developed in Express that hosts audio tracks, covers, images, APKs and exposes the necessary REST endpoints for playback and file management. Accessible from any device with Internet connection.",
+        "buttons": [
+          {
+            "label": "Repository",
+            "href": "https://github.com/raulgar19/EchoPlayBackend"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,32 +1,25 @@
 import "./Contact.css";
+import { useTranslation } from "react-i18next";
 
 function Contact() {
+  const { t } = useTranslation();
+
   return (
     <section className="contact" id="contact">
-      <h2>Contacto</h2>
-      <p>
-        Puedes ponerte en contacto conmigo a través de los siguientes medios:
-      </p>
+      <h2>{t("title")}</h2>
+      <p>{t("description")}</p>
 
       <div className="contact-info">
-        <p>Email: raulgamu2003@gmail.com</p>
+        <p>{t("email")}: raulgamu2003@gmail.com</p>
         <p>
-          LinkedIn:{" "}
-          <a
-            href="https://www.linkedin.com/in/raúl-garcía-muñoz-595974263"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          {t("linkedin")}:{" "}
+          <a href={t("linkedinUrl")} target="_blank" rel="noopener noreferrer">
             linkedin.com/in/raúl-garcía-muñoz
           </a>
         </p>
         <p>
-          GitHub:{" "}
-          <a
-            href="https://github.com/raulgar19"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          {t("github")}:{" "}
+          <a href={t("githubUrl")} target="_blank" rel="noopener noreferrer">
             github.com/raulgar19
           </a>
         </p>

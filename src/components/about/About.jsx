@@ -1,22 +1,19 @@
 import React from "react";
+import { useTranslation, Trans } from "react-i18next";
 import "./About.css";
 
 const About = () => {
+  const { t } = useTranslation();
+
   return (
     <section id="about" className="about">
       <div className="about-content">
-        <h2>Sobre mí</h2>
+        <h2>{t("about.title")}</h2>
         <p>
-          Hola, soy <strong>Raúl García Muñoz</strong>, desarrollador Full Stack
-          especializado en aplicaciones web y multiplataforma. Me apasiona crear
-          soluciones funcionales y eficientes que ofrezcan una experiencia de
-          usuario fluida.
+          <Trans i18nKey="about.paragraph1" components={{ 1: <strong /> }} />
         </p>
         <p>
-          También he explorado el desarrollo de videojuegos con{" "}
-          <strong>Unity</strong> a través de un curso intensivo, lo que me
-          permitió ampliar mi perspectiva en programación y diseño de sistemas
-          interactivos.
+          <Trans i18nKey="about.paragraph2" components={{ 1: <strong /> }} />
         </p>
       </div>
     </section>

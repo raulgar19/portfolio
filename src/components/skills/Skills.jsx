@@ -1,227 +1,47 @@
+import React from "react";
+import { useTranslation } from "react-i18next";
 import "./Skills.css";
 
-function Skills() {
+const Skills = () => {
+  const { t } = useTranslation();
+
   return (
     <section id="skills" className="skills">
-      <h2>Conocimientos</h2>
+      <h2>{t("skills.title")}</h2>
 
       <div className="skills-columns">
+        {/* Tecnologías */}
         <div className="skills-group">
-          <h3>Tecnologías</h3>
+          <h3>{t("skills.technologies.title")}</h3>
           <div className="skills-grid">
-            <div className="skill-item">
-              <img src="java.png" alt="Java" />
-              <p>Java</p>
-            </div>
-            <div className="skill-item">
-              <img src="kotlin.png" alt="Kotlin" />
-              <p>Kotlin</p>
-            </div>
-            <div className="skill-item">
-              <img src="csharp.png" alt="C#" />
-              <p>C#</p>
-            </div>
-            <div className="skill-item">
-              <img
-                src="dotnet.png"
-                alt=".NET"
-                style={{
-                  borderRadius: 10,
-                  marginTop: 10,
-                  marginBottom: 18,
-                  width: 65,
-                  height: 65,
-                }}
-              />
-              <p>.NET</p>
-            </div>
-            <div className="skill-item">
-              <img
-                src="javascript.png"
-                alt="JavaScript"
-                style={{
-                  borderRadius: 10,
-                  marginTop: 10,
-                  marginBottom: 18,
-                  width: 65,
-                  height: 65,
-                }}
-              />
-              <p>JavaScript</p>
-            </div>
-            <div className="skill-item">
-              <img src="react.png" alt="React" />
-              <p>React / React Native</p>
-            </div>
-            <div className="skill-item">
-              <img src="angular.png" alt="Angular" />
-              <p>Angular</p>
-            </div>
-            <div className="skill-item">
-              <img src="vue.png" alt="Vue.js" />
-              <p>Vue.js</p>
-            </div>
-            <div className="skill-item">
-              <img
-                src="jquery.png"
-                alt="JQuery"
-                style={{
-                  borderRadius: 10,
-                  marginTop: 10,
-                  marginBottom: 18,
-                  width: 65,
-                  height: 65,
-                }}
-              />
-              <p>JQuery</p>
-            </div>
-            <div className="skill-item">
-              <img
-                src="python.png"
-                alt="Python"
-                style={{
-                  borderRadius: 10,
-                  marginTop: 10,
-                  marginBottom: 18,
-                  width: 65,
-                  height: 65,
-                }}
-              />
-              <p>Python</p>
-            </div>
-            <div className="skill-item">
-              <img src="sqlserver.png" alt="SQL Server" />
-              <p>SQL Server</p>
-            </div>
-            <div className="skill-item">
-              <img
-                src="postgresql.png"
-                alt="PostgreSQL"
-                style={{
-                  borderRadius: 10,
-                  marginTop: 10,
-                  marginBottom: 12,
-                  width: 65,
-                  height: 65,
-                }}
-              />
-              <p>PostgreSQL</p>
-            </div>
+            {t("skills.technologies.items", { returnObjects: true }).map(
+              (item, index) => (
+                <div className="skill-item" key={index}>
+                  <img src={item.img} alt={item.alt} style={item.style || {}} />
+                  <p>{item.name}</p>
+                </div>
+              )
+            )}
           </div>
         </div>
 
+        {/* IDEs y Aplicaciones */}
         <div className="skills-group">
-          <h3>IDEs y Aplicaciones</h3>
+          <h3>{t("skills.ides.title")}</h3>
           <div className="skills-grid">
-            <div className="skill-item">
-              <img src="vscode.png" alt="VS Code" />
-              <p>VS Code</p>
-            </div>
-            <div className="skill-item">
-              <img src="visualstudio.png" alt="Visual Studio" />
-              <p>Visual Studio</p>
-            </div>
-            <div className="skill-item">
-              <img
-                src="androidstudio.png"
-                alt="Android Studio"
-                style={{
-                  borderRadius: 5,
-                  marginTop: 5,
-                  marginBottom: 12,
-                  width: 71,
-                  height: 71,
-                }}
-              />
-              <p>Android Studio</p>
-            </div>
-            <div className="skill-item">
-              <img
-                src="intellij.png"
-                alt="IntelliJ Idea"
-                style={{
-                  borderRadius: 10,
-                  marginTop: 10,
-                  marginBottom: 18,
-                  width: 60,
-                  height: 60,
-                }}
-              />
-              <p>IntelliJ Idea</p>
-            </div>
-            <div className="skill-item">
-              <img
-                src="unity.png"
-                alt="Unity"
-                style={{
-                  borderRadius: 10,
-                  marginTop: 10,
-                  marginBottom: 18,
-                  width: 65,
-                  height: 65,
-                }}
-              />
-              <p>Unity</p>
-            </div>
-            <div className="skill-item">
-              <img
-                src="git.png"
-                alt="Git"
-                style={{
-                  borderRadius: 10,
-                  marginTop: 8,
-                  marginBottom: 15,
-                  width: 67,
-                  height: 67,
-                }}
-              />
-              <p>Git</p>
-            </div>
-            <div className="skill-item">
-              <img
-                src="github.png"
-                alt="Github"
-                style={{
-                  borderRadius: 10,
-                  marginTop: 8,
-                  marginBottom: 15,
-                  width: 67,
-                  height: 67,
-                }}
-              />
-              <p>Github</p>
-            </div>
-            <div className="skill-item">
-              <img src="docker.png" alt="Docker" />
-              <p>Docker</p>
-            </div>
-            <div className="skill-item">
-              <img src="dbeaver.png" alt="DBeaver" />
-              <p>DBeaver</p>
-            </div>
-            <div className="skill-item">
-              <img src="postman.png" alt="Postman" />
-              <p>Postman</p>
-            </div>
-            <div className="skill-item">
-              <img
-                src="powerapps.png"
-                alt="Microsoft PowerApps"
-                style={{
-                  borderRadius: 10,
-                  marginTop: 10,
-                  marginBottom: 18,
-                  width: 61,
-                  height: 61,
-                }}
-              />
-              <p>Microsoft PowerApps</p>
-            </div>
+            {t("skills.ides.items", { returnObjects: true }).map(
+              (item, index) => (
+                <div className="skill-item" key={index}>
+                  <img src={item.img} alt={item.alt} style={item.style || {}} />
+                  <p>{item.name}</p>
+                </div>
+              )
+            )}
           </div>
         </div>
       </div>
     </section>
   );
-}
+};
 
 export default Skills;

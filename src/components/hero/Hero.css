@@ -4,7 +4,8 @@
   align-items: center;
   text-align: center;
   padding: 2rem;
-  max-width: 900px; /* 🔥 más ancho */
+  padding-left: 5rem;
+  max-width: 850px; /* 🔥 más ancho */
   max-height: 500px; /* alto máximo */
   margin: 2rem auto; /* centrado horizontal y margen superior/inferior */
   border-radius: 20px; /* bordes redondeados */

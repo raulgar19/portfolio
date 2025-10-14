@@ -136,3 +136,23 @@
 .light-mode .theme-toggle:hover {
   background-color: rgba(0, 0, 0, 0.05);
 }
+
+.lang-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.4rem;
+  margin-right: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.lang-toggle:hover {
+  transform: scale(1.2);
+}
+
+.flag-icon {
+  width: 29px;
+  height: 24px;
+  border-radius: 4px;
+  object-fit: cover;
+}
