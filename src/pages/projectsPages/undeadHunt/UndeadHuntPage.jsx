@@ -13,9 +13,10 @@ function UndeadHuntPage() {
           <h1>Undead Hunt</h1>
           <p className="uh-description">
             <strong>Undead Hunt</strong> es un videojuego desarrollado como
-            proyecto final del curso de Desarrollo de Videojuegos. Inspirado en
-            el modo zombies de la saga <em>Call of Duty</em>, este título
-            combina acción intensa con una ambientación oscura y desafiante.
+            proyecto final del curso de Desarrollo de Videojuegos y Realidad
+            Virtual. Inspirado en el modo zombies de la saga{" "}
+            <em>Call of Duty</em>, este título combina acción intensa con una
+            ambientación oscura y desafiante.
             <br />
             <br />
             El jugador debe sobrevivir a oleadas infinitas de enemigos,

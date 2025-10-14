@@ -16,9 +16,9 @@ function MoneyMinderPage() {
             Aplicaciones Multiplataforma, diseñado para facilitar la gestión
             financiera personal. La aplicación permite a los usuarios registrar
             sus ingresos y gastos y clasificarlos por categorías para poder
-            tener seguimiento sobre su economía. Además, incluye incluye
-            diferentes gráficas para poder hacer más visual y sencillo a la hora
-            de ver la trayectoria del usuario. Este proyecto tiene 3 versiones:
+            tener seguimiento sobre su economía. Además, incluye diferentes
+            gráficas para ser más visual y sencillo a la hora de ver la
+            trayectoria del usuario. <br /> Este proyecto tiene 3 versiones:
           </p>
 
           <ul className="mm-version-list">

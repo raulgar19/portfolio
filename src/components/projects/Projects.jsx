@@ -13,7 +13,7 @@ const Projects = () => {
           <p>
             Proyecto TFG de Desarrollo de Aplicaciones Multiplataforma: una app
             tipo bancaria que gestiona y hace seguimiento de los diferentes
-            gastos e ingresos.
+            gastos e ingresos del usuario.
           </p>
           <Link to="/project/money-minder">Más información</Link>
         </div>
@@ -23,8 +23,8 @@ const Projects = () => {
           <h3>Undead Hunt</h3>
           <p>
             Proyecto de fin de curso de Desarrollo de Videojuegos: un juego tipo
-            shooter PVE basado en el modo zombies de la famosa saga Call of
-            Duty.
+            shooter PVE en tercera persona, basado en el modo zombies de la
+            famosa saga Call of Duty.
           </p>
           <Link to="/project/undead-hunt">Más información</Link>
         </div>
@@ -34,8 +34,8 @@ const Projects = () => {
           <h3>My Pet's Health Hub</h3>
           <p>
             Proyecto TFG de Desarrollo de Aplicaciones Web: una plataforma que
-            gestiona mascotas, veterinarios y otras funcionalidades relacionadas
-            con la salud de las mascotas.
+            gestiona mascotas, veterinarios y otras funcionalidades y servicios
+            relacionados con las mascotas.
           </p>
           <Link to="/project/my-pets-health-hub">Más información</Link>
         </div>
@@ -44,8 +44,8 @@ const Projects = () => {
           <img src="echoplay.png" alt="EchoPlay" />
           <h3>EchoPlay</h3>
           <p>
-            Proyecto de reproducción de música estilo Spotify: permite crear
-            listas, reproducir canciones, y gestionar la música de manera
+            Proyecto personal de reproducción de música estilo Spotify: permite
+            crear listas, reproducir canciones, y gestionar la música de manera
             interactiva.
           </p>
           <Link to="/project/echoplay">Más información</Link>
