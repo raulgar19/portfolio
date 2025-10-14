@@ -31,6 +31,7 @@ function EchoPlayPage() {
         <section className="echoplaypage-images">
           <div className="echoplay-images-container">
             <img
+              style={{ width: 215 }}
               className="side-image app-image"
               src="/echoplay-app.png"
               alt="Echo Play App"
