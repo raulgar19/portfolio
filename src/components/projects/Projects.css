@@ -173,3 +173,37 @@
     background-position: 0% 50%;
   }
 }
+
+@media (max-width: 768px) {
+  .projects-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-card {
+    width: 90%;
+    max-width: 300px;
+    padding: 15px;
+  }
+
+  .projects-container h2 {
+    font-size: 1.6rem;
+  }
+
+  .project-card img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .project-card h3 {
+    font-size: 0.9rem;
+  }
+
+  .project-card p {
+    font-size: 0.75rem;
+  }
+
+  .project-card a {
+    font-size: 0.75rem;
+  }
+}

@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { useTheme } from "../../context/ThemeContext";
-import { Sun, Moon } from "lucide-react";
+import { Sun, Moon, Menu, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import "./Navbar.css";
 
 const Navbar = () => {
   const { darkMode, toggleTheme } = useTheme();
   const { t, i18n } = useTranslation();
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleLanguage = () => {
     const newLang = i18n.language === "es" ? "en" : "es";
@@ -16,15 +17,18 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      {/* Logo a la izquierda */}
       <div className="navbar-left">
         <a href="/" className="navbar-logo-link">
           <h1 className="navbar-logo">{"{R}"}</h1>
         </a>
       </div>
 
-      {/* Enlaces centrados */}
-      <ul className="navbar-links">
+      {/* Botón hamburguesa en móvil */}
+      <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+        {menuOpen ? <X size={28} /> : <Menu size={28} />}
+      </div>
+
+      <ul className={`navbar-links ${menuOpen ? "active" : ""}`}>
         <li>
           <a href="#about">{t("navbar.about")}</a>
         </li>

@@ -35,14 +35,15 @@
 /* Responsivo */
 @media (max-width: 768px) {
   .about {
-    padding: 1.5rem;
+    padding: 1rem;
+    margin: 3rem 0;
   }
 
   .about h2 {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 
   .about p {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
   }
 }

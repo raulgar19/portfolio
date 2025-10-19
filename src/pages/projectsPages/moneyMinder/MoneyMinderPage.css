@@ -218,19 +218,35 @@
   .mm-details {
     flex-direction: column;
     text-align: center;
+    padding: 1.5rem;
+    gap: 2rem;
+    margin: 30px 10px;
   }
 
-  .mm-text,
-  .mm-video {
-    flex: unset;
-    width: 100%;
+  .mm-text h1 {
+    font-size: 1.6rem;
+  }
+
+  .mm-description {
+    font-size: 0.8rem;
+  }
+
+  .mm-version-list {
+    font-size: 0.8rem;
   }
 
   .mm-buttons {
     flex-direction: column;
-    gap: 1.5rem;
+    align-items: center;
   }
+
+  .mm-btn {
+    width: 90%;
+    padding: 0.5rem 0.6rem;
+  }
+
   .mm-video video {
-    height: 350px;
+    max-width: 100%;
+    height: 620px;
   }
 }
