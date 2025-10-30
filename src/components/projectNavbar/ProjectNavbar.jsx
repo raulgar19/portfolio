@@ -32,24 +32,29 @@ const ProjectNavbar = () => {
         <button
           onClick={toggleLanguage}
           className="lang-toggle"
+          data-lang={i18n.language}
           title="Cambiar idioma"
         >
-          {i18n.language === "es" ? (
-            <img src="/flags/en.png" alt="English" className="flag-icon" />
-          ) : (
-            <img src="/flags/es.png" alt="Español" className="flag-icon" />
-          )}
+          <div className="lang-toggle-slider">
+            {i18n.language === "es" ? (
+              <img src="/flags/es.png" alt="Español" className="flag-icon" />
+            ) : (
+              <img src="/flags/en.png" alt="English" className="flag-icon" />
+            )}
+          </div>
         </button>
         <button
           onClick={toggleTheme}
           className="project-theme-toggle"
           title="Cambiar tema"
         >
-          {darkMode ? (
-            <Sun size={22} color="gold" />
-          ) : (
-            <Moon size={22} color="#1e293b" />
-          )}
+          <div className="project-theme-toggle-slider">
+            {darkMode ? (
+              <Moon size={14} color="#1e293b" />
+            ) : (
+              <Sun size={14} color="#f59e0b" />
+            )}
+          </div>
         </button>
       </div>
     </nav>

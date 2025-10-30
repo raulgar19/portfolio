@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import ProjectNavbar from "../../../components/projectNavbar/ProjectNavbar";
 import Footer from "../../../components/footer/Footer";
@@ -6,6 +6,8 @@ import "./MoneyMinderPage.css";
 
 function MoneyMinderPage() {
   const { t } = useTranslation();
+  const [showBoot, setShowBoot] = useState(true);
+  const [bootProgress, setBootProgress] = useState(0);
 
   const versions = t("moneyMinderPage.versions", { returnObjects: true });
   const documentation = t("moneyMinderPage.documentation.links", {
@@ -13,8 +15,47 @@ function MoneyMinderPage() {
   });
   const video = t("moneyMinderPage.video", { returnObjects: true });
 
+  useEffect(() => {
+    // Simulate boot progress
+    const interval = setInterval(() => {
+      setBootProgress((prev) => {
+        if (prev >= 100) {
+          clearInterval(interval);
+          setTimeout(() => setShowBoot(false), 500);
+          return 100;
+        }
+        return prev + 2;
+      });
+    }, 30);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="mm-page">
+      {showBoot && (
+        <div className="windows-boot">
+          <div className="windows-boot-content">
+            <div className="windows-logo">
+              <div className="windows-square windows-square-1"></div>
+              <div className="windows-square windows-square-2"></div>
+              <div className="windows-square windows-square-3"></div>
+              <div className="windows-square windows-square-4"></div>
+            </div>
+            <div className="windows-loading">
+              <div className="windows-spinner"></div>
+            </div>
+            <p className="windows-text">Windows</p>
+            <p className="windows-subtext">Iniciando MoneyMinder...</p>
+            <div className="windows-progress-bar">
+              <div
+                className="windows-progress-fill"
+                style={{ width: `${bootProgress}%` }}
+              ></div>
+            </div>
+          </div>
+        </div>
+      )}
       <ProjectNavbar />
 
       <section className="mm-details">

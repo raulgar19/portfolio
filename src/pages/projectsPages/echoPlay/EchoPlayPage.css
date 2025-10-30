@@ -13,6 +13,135 @@
   transition: background 0.6s ease, color 0.4s ease;
   background-attachment: fixed;
   color: var(--text-color);
+  position: relative;
+}
+
+/* Ubuntu Boot Screen */
+.ubuntu-boot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #2c001e 0%, #300a24 50%, #5e2750 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeOut 0.5s ease 4s forwards;
+}
+
+.ubuntu-boot-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.ubuntu-logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.ubuntu-logo {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.ubuntu-circle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #dd4814;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(221, 72, 20, 0.6);
+}
+
+.ubuntu-circle-1 {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: ubuntuPulse 2s ease-in-out infinite;
+}
+
+.ubuntu-circle-2 {
+  bottom: 10px;
+  left: 10px;
+  animation: ubuntuPulse 2s ease-in-out 0.3s infinite;
+}
+
+.ubuntu-circle-3 {
+  bottom: 10px;
+  right: 10px;
+  animation: ubuntuPulse 2s ease-in-out 0.6s infinite;
+}
+
+.ubuntu-circle-center {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: #dd4814;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 20px rgba(221, 72, 20, 0.8);
+}
+
+.ubuntu-text {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 300;
+  font-family: "Ubuntu", sans-serif;
+  letter-spacing: 2px;
+}
+
+.ubuntu-loading {
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: "Ubuntu", sans-serif;
+  min-height: 24px;
+}
+
+.ubuntu-progress-container {
+  width: 250px;
+}
+
+.ubuntu-progress-bar {
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.ubuntu-progress-fill {
+  height: 100%;
+  background: #dd4814;
+  transition: width 0.1s ease;
+  box-shadow: 0 0 10px rgba(221, 72, 20, 0.6);
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes ubuntuPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
 }
 
 .echoplaypage-content {
@@ -122,4 +251,56 @@
 
 .dark-mode .echoplay-btn:hover {
   background-color: #2a3952;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .echoplaypage-content {
+    padding: 1.5rem;
+    margin: 30px 10px;
+  }
+
+  .echoplaypage-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .echoplaypage-header p {
+    font-size: 0.8rem;
+  }
+
+  .echoplay-btn {
+    font-size: 0.8rem;
+  }
+
+  .echoplay-column h2 {
+    font-size: 1rem;
+  }
+
+  .echoplay-column p {
+    font-size: 0.8rem;
+  }
+
+  .echoplay-images-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .app-image {
+    height: 180px;
+    width: auto;
+  }
+
+  .side-image {
+    width: 140px;
+    height: auto;
+  }
+
+  .center-image {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+  }
 }

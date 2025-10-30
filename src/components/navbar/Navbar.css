@@ -33,6 +33,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  gap: 0.5rem;
   flex: 1;
 }
 
@@ -94,67 +95,106 @@
   width: 100%;
 }
 
-/* Botón del modo */
+/* Botón del modo - Switch Style */
 .theme-toggle {
-  background: none;
+  position: relative;
+  width: 50px;
+  height: 26px;
+  background-color: #ccc;
   border: none;
+  border-radius: 34px;
   cursor: pointer;
-  padding: 8px;
-  border-radius: 50%;
   transition: background-color 0.3s;
+  padding: 0;
 }
 
-.theme-toggle:hover {
-  background-color: rgba(0, 0, 0, 0.1);
+.dark-mode .theme-toggle {
+  background-color: #1e293b;
 }
 
-.theme-toggle svg {
-  width: 30px;
-  height: 30px;
+.light-mode .theme-toggle {
+  background-color: #cbd5e1;
+}
+
+.theme-toggle-slider {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 22px;
+  height: 22px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark-mode .theme-toggle-slider {
+  transform: translateX(24px);
+}
+
+.theme-toggle-slider svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* Switch de idioma */
+.lang-toggle {
+  position: relative;
+  width: 50px;
+  height: 26px;
+  background-color: #cbd5e1;
+  border: none;
+  border-radius: 34px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  padding: 0;
+  margin-right: 0.8rem;
+}
+
+.dark-mode .lang-toggle {
+  background-color: #1e293b;
+}
+
+.lang-toggle-slider {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 22px;
+  height: 22px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.lang-toggle[data-lang="en"] .lang-toggle-slider {
+  transform: translateX(24px);
+}
+
+.flag-icon {
+  width: 18px;
+  height: 14px;
+  border-radius: 2px;
+  object-fit: cover;
 }
 
 /* Modo oscuro */
 .dark-mode .navbar {
-  background-color: #252f3e; /* gris antracita oscuro */
-  border-color: #3b4759; /* línea sutil */
-  color: #f1f5f9; /* texto claro */
-}
-
-/* Hover del toggle en oscuro */
-.dark-mode .theme-toggle:hover {
-  background-color: rgba(241, 245, 249, 0.1);
+  background-color: #252f3e;
+  border-color: #3b4759;
+  color: #f1f5f9;
 }
 
 /* Modo claro */
 .light-mode .navbar {
-  background-color: #f9f7f7; /* gris crema */
-  border-color: #e0e0e0; /* línea sutil */
-  color: #1a1a1a; /* texto oscuro */
-}
-
-/* Hover del toggle en claro */
-.light-mode .theme-toggle:hover {
-  background-color: rgba(0, 0, 0, 0.05);
-}
-
-.lang-toggle {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 1.4rem;
-  margin-right: 1rem;
-  transition: transform 0.2s ease;
-}
-
-.lang-toggle:hover {
-  transform: scale(1.2);
-}
-
-.flag-icon {
-  width: 29px;
-  height: 24px;
-  border-radius: 4px;
-  object-fit: cover;
+  background-color: #f9f7f7;
+  border-color: #e0e0e0;
+  color: #1a1a1a;
 }
 
 /* Ocultar la hamburguesa en escritorio */
@@ -162,6 +202,7 @@
   display: none;
   cursor: pointer;
   z-index: 101; /* encima del menú */
+  order: 3;
 }
 
 /* Navbar-links responsive */
@@ -196,5 +237,21 @@
   /* Opcional: ocultar enlaces centrales en móvil */
   .navbar-links {
     flex: none;
+  }
+
+  /* Iconos más pequeños en responsive */
+  .theme-toggle svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .flag-icon {
+    width: 22px;
+    height: 18px;
+  }
+
+  .lang-toggle {
+    font-size: 1.1rem;
+    margin-right: 0.7rem;
   }
 }

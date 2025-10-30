@@ -351,7 +351,7 @@
         "description": "Android application developed in Kotlin acting as the main player, connecting to the server to stream available songs.",
         "buttons": [
           {
-            "label": "Repository / APK",
+            "label": "Repository",
             "href": "https://github.com/raulgar19/EchoPlayFrontend"
           }
         ]
@@ -361,7 +361,7 @@
         "description": "Desktop application in C# that allows uploading songs and covers to the server from a local machine, keeping the music library updated and organized.",
         "buttons": [
           {
-            "label": "Repository / ZIP",
+            "label": "Repository",
             "href": "https://github.com/raulgar19/EchoPlayUploader"
           }
         ]
@@ -371,7 +371,7 @@
         "description": "Administrative application in C# for managing the server, users, and playlists, providing full control over the music environment.",
         "buttons": [
           {
-            "label": "Repository / ZIP",
+            "label": "Repository",
             "href": "https://github.com/raulgar19/EchoPlayManager"
           }
         ]
