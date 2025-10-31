@@ -109,26 +109,26 @@ const Hero = () => {
                 )}
               </span>
             </div>
-            {displayedCommand.length === command.length && (
-              <>
-                <h1 className="terminal-output">
+            <h1 className="terminal-output">
+              {displayedCommand.length === command.length && (
+                <>
                   {displayedName}
                   {displayedName.length < fullName.length && showCursor && (
                     <span className="cursor">|</span>
                   )}
-                </h1>
-                <p className="terminal-subtitle">
-                  {displayedName.length === fullName.length && (
-                    <>
-                      <span className="terminal-prompt-small">{">"}</span>{" "}
-                      {displayedSubtitle}
-                      {displayedSubtitle.length < fullSubtitle.length &&
-                        showCursor && <span className="cursor">|</span>}
-                    </>
-                  )}
-                </p>
-              </>
-            )}
+                </>
+              )}
+            </h1>
+            <p className="terminal-subtitle">
+              {displayedName.length === fullName.length && (
+                <>
+                  <span className="terminal-prompt-small">{">"}</span>{" "}
+                  {displayedSubtitle}
+                  {displayedSubtitle.length < fullSubtitle.length &&
+                    showCursor && <span className="cursor">|</span>}
+                </>
+              )}
+            </p>
           </div>
         </div>
         <div className="hero-buttons">
