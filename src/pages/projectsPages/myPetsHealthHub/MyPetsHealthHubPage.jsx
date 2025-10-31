@@ -34,7 +34,7 @@ function MyPetsHealthHubPage() {
     }, 400);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [messages]);
 
   return (
     <div className="mphh-page">
