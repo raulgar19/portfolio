@@ -52,11 +52,37 @@
 }
 
 .projects-container h2 {
-  text-align: center; /* centra el título */
+  text-align: center;
   font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 2rem;
+  font-weight: 800;
+  margin-bottom: 3rem;
   transition: color 0.3s ease;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+/* Subrayado animado del título */
+.projects-container h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #6a1b9a, #00bfa5);
+  border-radius: 2px;
+  animation: expandWidth 1.5s ease;
+}
+
+@keyframes expandWidth {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80px;
+  }
 }
 
 /* Cambiar color según modo */

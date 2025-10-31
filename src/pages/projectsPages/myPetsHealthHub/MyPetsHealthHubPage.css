@@ -168,6 +168,22 @@
 .mphh-details h1 {
   font-size: 2rem;
   margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+/* Línea inferior de colores para el título */
+.mphh-details h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 4px;
+  background: linear-gradient(90deg, #6a1b9a, #00bfa5);
+  border-radius: 2px;
 }
 
 .mphh-description {
@@ -195,62 +211,286 @@
 /* Contenedor de columnas */
 .mphh-columns {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .mphh-column {
-  border-radius: 10px;
-  padding: 20px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  border-radius: 15px;
+  padding: 30px;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-.light-mode .mphh-column {
-  background-color: #e8f2ff;
+/* Primera columna - Estilo con borde sólido y fondo degradado */
+.mphh-column:first-child {
+  border-radius: 15px;
 }
 
-.dark-mode .mphh-column {
-  background-color: #1b2535;
+.light-mode .mphh-column:first-child {
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  border: 2px solid #4a90e2;
+  box-shadow: 0 4px 15px rgba(74, 144, 226, 0.1);
 }
 
-.mphh-column:hover {
-  transform: translateY(-5px);
+.dark-mode .mphh-column:first-child {
+  background: linear-gradient(135deg, #1e3a5f 0%, #0d2847 100%);
+  border: 2px solid #60a5fa;
+  box-shadow: 0 4px 15px rgba(96, 165, 250, 0.15);
+}
+
+.mphh-column:first-child h3::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #4a90e2, #60a5fa);
+  border-radius: 2px;
+}
+
+.mphh-column:first-child h3 {
+  position: relative;
+  padding-bottom: 12px;
+}
+
+/* Segunda columna (medio) - Estilo con patrón de puntos y tema morado */
+.mphh-column:nth-child(2) {
+  border-radius: 15px;
+  position: relative;
+}
+
+.light-mode .mphh-column:nth-child(2) {
+  background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%);
+  border: 2px solid #9333ea;
+  box-shadow: 0 4px 18px rgba(147, 51, 234, 0.12);
+}
+
+.dark-mode .mphh-column:nth-child(2) {
+  background: linear-gradient(135deg, #2e1065 0%, #1e1b4b 100%);
+  border: 2px solid #a78bfa;
+  box-shadow: 0 4px 18px rgba(167, 139, 250, 0.18);
+}
+
+.mphh-column:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(
+    circle,
+    rgba(147, 51, 234, 0.1) 1px,
+    transparent 1px
+  );
+  background-size: 20px 20px;
+  pointer-events: none;
+  border-radius: 15px;
+}
+
+.dark-mode .mphh-column:nth-child(2)::before {
+  background-image: radial-gradient(
+    circle,
+    rgba(167, 139, 250, 0.15) 1px,
+    transparent 1px
+  );
+}
+
+.mphh-column:nth-child(2) h3::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #9333ea, #c084fc);
+  border-radius: 2px;
+}
+
+.mphh-column:nth-child(2) h3 {
+  position: relative;
+  padding-bottom: 12px;
+}
+
+/* Tercera columna - Estilo con glassmorphism y efecto de resplandor */
+.mphh-column:last-child {
+  border-radius: 15px;
+}
+
+.light-mode .mphh-column:last-child {
+  background: linear-gradient(
+    135deg,
+    rgba(240, 253, 244, 0.9) 0%,
+    rgba(209, 250, 229, 0.8) 100%
+  );
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(144, 190, 109, 0.4);
+  box-shadow: 0 4px 20px rgba(144, 190, 109, 0.15);
+}
+
+.dark-mode .mphh-column:last-child {
+  background: linear-gradient(
+    135deg,
+    rgba(30, 58, 38, 0.85) 0%,
+    rgba(20, 40, 25, 0.9) 100%
+  );
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(74, 222, 128, 0.3);
+  box-shadow: 0 4px 20px rgba(74, 222, 128, 0.2);
+}
+
+.mphh-column:last-child h3::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #90be6d, #4ade80);
+  border-radius: 2px;
+}
+
+.mphh-column:last-child h3 {
+  position: relative;
+  padding-bottom: 12px;
+}
+
+/* Hover effects diferenciados */
+.mphh-column:first-child:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(74, 144, 226, 0.25);
+}
+
+.light-mode .mphh-column:first-child:hover {
+  border-color: #2979ff;
+}
+
+.dark-mode .mphh-column:first-child:hover {
+  border-color: #90caf9;
+}
+
+.mphh-column:nth-child(2):hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 8px 28px rgba(147, 51, 234, 0.28);
+}
+
+.light-mode .mphh-column:nth-child(2):hover {
+  border-color: #7c3aed;
+}
+
+.dark-mode .mphh-column:nth-child(2):hover {
+  border-color: #c084fc;
+}
+
+.mphh-column:last-child:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 8px 30px rgba(144, 190, 109, 0.3);
+}
+
+.light-mode .mphh-column:last-child:hover {
+  border-color: rgba(144, 190, 109, 0.7);
+}
+
+.dark-mode .mphh-column:last-child:hover {
+  border-color: rgba(74, 222, 128, 0.5);
 }
 
 /* Botones dentro de cada columna */
 .mphh-column-buttons {
   display: flex;
   flex-direction: column;
-  gap: 1rem; /* Espacio entre botones */
+  gap: 0.8rem;
   margin-top: 1rem;
-  justify-content: center; /* Centrar botones dentro de la columna */
+  align-items: center;
 }
 
 .mphh-column-buttons .mphh-btn {
   text-decoration: none;
-  font-size: 1rem;
-  padding: 0.6rem 1.3rem;
+  font-size: 0.95rem;
+  padding: 0.65rem 1.2rem;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: all 0.3s ease;
+  max-width: 200px;
+  width: fit-content;
+  text-align: center;
 }
 
-/* Colores de los botones */
-.light-mode .mphh-btn {
-  background-color: #007bff;
+/* Botones de la primera columna (azul) */
+.light-mode .mphh-column:first-child .mphh-btn {
+  background-color: #4a90e2;
   color: #fff;
+  border: 2px solid #4a90e2;
 }
 
-.light-mode .mphh-btn:hover {
-  background-color: #0056b3;
+.light-mode .mphh-column:first-child .mphh-btn:hover {
+  background-color: #2979ff;
+  border-color: #2979ff;
+  transform: translateY(-2px);
 }
 
-.dark-mode .mphh-btn {
-  background-color: #334155;
+.dark-mode .mphh-column:first-child .mphh-btn {
+  background-color: #60a5fa;
+  color: #0d2847;
+  border: 2px solid #60a5fa;
+}
+
+.dark-mode .mphh-column:first-child .mphh-btn:hover {
+  background-color: #90caf9;
+  border-color: #90caf9;
+  transform: translateY(-2px);
+}
+
+/* Botones de la segunda columna (morado) */
+.light-mode .mphh-column:nth-child(2) .mphh-btn {
+  background-color: #9333ea;
   color: #fff;
+  border: 2px solid #9333ea;
 }
 
-.dark-mode .mphh-btn:hover {
-  background-color: #2a3952;
+.light-mode .mphh-column:nth-child(2) .mphh-btn:hover {
+  background-color: #7c3aed;
+  border-color: #7c3aed;
+  transform: translateY(-2px);
+}
+
+.dark-mode .mphh-column:nth-child(2) .mphh-btn {
+  background-color: #a78bfa;
+  color: #1e1b4b;
+  border: 2px solid #a78bfa;
+}
+
+.dark-mode .mphh-column:nth-child(2) .mphh-btn:hover {
+  background-color: #c084fc;
+  border-color: #c084fc;
+  transform: translateY(-2px);
+}
+
+/* Botones de la tercera columna (verde) */
+.light-mode .mphh-column:last-child .mphh-btn {
+  background-color: #90be6d;
+  color: #fff;
+  border: 2px solid #90be6d;
+}
+
+.light-mode .mphh-column:last-child .mphh-btn:hover {
+  background-color: #7aa354;
+  border-color: #7aa354;
+  transform: translateY(-2px);
+}
+
+.dark-mode .mphh-column:last-child .mphh-btn {
+  background-color: #4ade80;
+  color: #14281a;
+  border: 2px solid #4ade80;
+}
+
+.dark-mode .mphh-column:last-child .mphh-btn:hover {
+  background-color: #6ee7a7;
+  border-color: #6ee7a7;
+  transform: translateY(-2px);
 }
 
 /* Botón de documentación */
@@ -262,11 +502,41 @@
 }
 
 .mphh-doc .mphh-btn {
-  font-size: 1rem;
-  padding: 0.9rem 1.8rem;
-  border-radius: 12px; /* Bordes redondos */
-  text-decoration: none; /* Sin subrayado */
-  display: inline-block; /* Asegura que se pueda aplicar padding correctamente */
+  font-size: 0.95rem;
+  padding: 0.65rem 1.2rem;
+  border-radius: 12px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.light-mode .mphh-doc .mphh-btn {
+  background-color: #6a1b9a;
+  color: #fff;
+  border: 2px solid #6a1b9a;
+  box-shadow: 0 4px 12px rgba(106, 27, 154, 0.2);
+}
+
+.light-mode .mphh-doc .mphh-btn:hover {
+  background-color: #7c3aed;
+  border-color: #7c3aed;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(106, 27, 154, 0.3);
+}
+
+.dark-mode .mphh-doc .mphh-btn {
+  background-color: #a78bfa;
+  color: #1e1b4b;
+  border: 2px solid #a78bfa;
+  box-shadow: 0 4px 12px rgba(167, 139, 250, 0.2);
+}
+
+.dark-mode .mphh-doc .mphh-btn:hover {
+  background-color: #c084fc;
+  border-color: #c084fc;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(167, 139, 250, 0.3);
 }
 
 /* Responsivo general */

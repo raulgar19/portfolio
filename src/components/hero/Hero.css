@@ -407,7 +407,7 @@
 
   .terminal-body {
     padding: 1rem;
-    min-height: 120px;
+    min-height: 160px;
   }
 
   .terminal-header {
@@ -421,13 +421,13 @@
 
   .terminal-output {
     font-size: 1.1rem;
-    min-height: 1.3rem;
+    min-height: 2.5rem;
     margin-bottom: 0.6rem;
   }
 
   .terminal-subtitle {
     font-size: 0.75rem;
-    min-height: 1rem;
+    min-height: 1.8rem;
   }
 
   .terminal-prompt-small {
