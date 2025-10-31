@@ -10,7 +10,10 @@ function Contact() {
       <p>{t("description")}</p>
 
       <div className="contact-info">
-        <p>{t("email")}: raulgamu2003@gmail.com</p>
+        <p>
+          {t("email")}:{" "}
+          <a href="mailto:raulgamu2003@gmail.com">raulgamu2003@gmail.com</a>
+        </p>
         <p>
           {t("linkedin")}:{" "}
           <a href={t("linkedinUrl")} target="_blank" rel="noopener noreferrer">
