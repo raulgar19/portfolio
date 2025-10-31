@@ -25,6 +25,12 @@
   z-index: 0;
 }
 
+/* En modo claro desactivamos el shimmer para dejar el fondo estático */
+.light-mode .about::before {
+  animation: none !important;
+  display: none;
+}
+
 @keyframes shimmer {
   0% {
     left: -100%;
@@ -37,28 +43,32 @@
   }
 }
 
-/* Modo claro: con borde y sombra sutil */
+/* Modo claro: con borde y sombra sutil (alineado con Contact) */
 .light-mode .about {
-  color: #333;
+  color: #222;
+  /* tarjeta clara con acento morado suave (igual que Contact) */
   background: linear-gradient(
-    135deg,
-    rgba(74, 144, 226, 0.05) 0%,
-    rgba(144, 190, 109, 0.05) 100%
+    180deg,
+    rgba(252, 249, 255, 0.98) 0%,
+    rgba(246, 243, 250, 0.98) 100%
   );
+  border: 1px solid rgba(106, 27, 154, 0.1);
   border-radius: 20px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 35px rgba(106, 27, 154, 0.06);
 }
 
 /* Modo oscuro: con efecto de brillo */
 .dark-mode .about {
   color: #f5f5f5;
+  /* tarjeta oscura para destacar del fondo */
   background: linear-gradient(
-    135deg,
-    rgba(74, 144, 226, 0.1) 0%,
-    rgba(144, 190, 109, 0.1) 100%
+    180deg,
+    rgba(18, 18, 26, 0.72) 0%,
+    rgba(26, 24, 36, 0.72) 100%
   );
+  border: 1px solid rgba(255, 255, 255, 0.04);
   border-radius: 20px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.45);
 }
 
 .about-content {
@@ -68,10 +78,27 @@
   z-index: 1;
 }
 
+/* Evita que el contenido quede pegado a los laterales en pantallas pequeñas */
+.about-content {
+  padding: 0 1.5rem;
+}
+
+.about {
+  /* Centrado y separación lateral para que no quede pegado a la pantalla */
+  margin: 4rem auto;
+  max-width: 1100px;
+  width: calc(100% - 3rem);
+  padding: 4rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
 .about h2 {
-  font-size: 2.8rem;
+  font-size: 2rem;
   font-weight: 800;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
   position: relative;
   display: inline-block;
   animation: fadeInDown 1s ease;
@@ -148,7 +175,9 @@
 }
 
 .light-mode .about p:hover {
-  box-shadow: 0 8px 25px rgba(74, 144, 226, 0.15);
+  /* quitar efecto de tarjeta en hover: mantener estático */
+  box-shadow: none;
+  transform: none;
 }
 
 .dark-mode .about p:hover {
@@ -156,11 +185,14 @@
 }
 
 .light-mode .about p {
-  background: rgba(255, 255, 255, 0.6);
-}
-
-.dark-mode .about p {
-  background: rgba(255, 255, 255, 0.05);
+  color: #222;
+  /* Párrafos internos con mismo tratamiento que contact-info */
+  /* Mantener párrafos simples (sin fondo/card) — la tarjeta grande ya destaca */
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0.6rem 0;
 }
 
 /* Resaltar texto strong con gradiente */
@@ -171,6 +203,57 @@
   background-clip: text;
   font-weight: 700;
   position: relative;
+}
+
+/* Dejar la sección About estática: desactivar animaciones y transiciones en pseudo-elementos y título (pero permitir animación en los párrafos) */
+.about::before,
+.about h2,
+.about h2::after {
+  animation: none !important;
+  transition: none !important;
+}
+/* Animaciones para los párrafos */
+.about-content p {
+  margin: 1.2rem 0;
+  font-size: 1.1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  animation: fadeInUp 1s ease;
+  animation-fill-mode: both;
+}
+
+.about-content p:nth-of-type(1) {
+  animation-delay: 0.5s;
+}
+
+.about-content p:nth-of-type(2) {
+  animation-delay: 0.6s;
+}
+
+.about-content p:nth-of-type(3) {
+  animation-delay: 0.7s;
+}
+
+.about-content p:hover {
+  transform: translateX(10px);
+}
+
+/* Fondos y hover iguales a contact-info */
+.light-mode .about-content p {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.dark-mode .about-content p {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.light-mode .about-content p:hover {
+  background: rgba(106, 27, 154, 0.08);
+}
+
+.dark-mode .about-content p:hover {
+  background: rgba(0, 191, 165, 0.1);
 }
 
 /* Responsivo */
