@@ -1,35 +1,176 @@
 .about {
-  /* ocupa todo el ancho */
-  margin: 4rem 0; /* solo margen vertical */
-  padding: 2rem;
+  margin: 4rem 0;
+  padding: 4rem 2rem;
   text-align: center;
+  position: relative;
+  overflow: hidden;
   transition: background 0.5s ease, color 0.5s ease;
 }
 
-/* Modo claro: degradado azul suave */
-.light-mode .about {
-  color: #333;
+/* Efecto de fondo animado con degradado */
+.about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(74, 144, 226, 0.1),
+    transparent
+  );
+  animation: shimmer 8s infinite;
+  z-index: 0;
 }
 
-/* Modo oscuro: degradado gris oscuro */
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Modo claro: con borde y sombra sutil */
+.light-mode .about {
+  color: #333;
+  background: linear-gradient(
+    135deg,
+    rgba(74, 144, 226, 0.05) 0%,
+    rgba(144, 190, 109, 0.05) 100%
+  );
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+}
+
+/* Modo oscuro: con efecto de brillo */
 .dark-mode .about {
   color: #f5f5f5;
+  background: linear-gradient(
+    135deg,
+    rgba(74, 144, 226, 0.1) 0%,
+    rgba(144, 190, 109, 0.1) 100%
+  );
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 }
 
 .about-content {
   max-width: 1000px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .about h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 2rem;
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 2.5rem;
+  position: relative;
+  display: inline-block;
+  animation: fadeInDown 1s ease;
+}
+
+/* Subrayado animado del título */
+.about h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #4a90e2, #90be6d);
+  border-radius: 2px;
+  animation: expandWidth 1.5s ease;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes expandWidth {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80px;
+  }
 }
 
 .about p {
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  animation: fadeInUp 1s ease;
+  animation-fill-mode: both;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about p:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.about p:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Efecto hover en los párrafos */
+.about p:hover {
+  transform: translateY(-5px);
+}
+
+.light-mode .about p:hover {
+  box-shadow: 0 8px 25px rgba(74, 144, 226, 0.15);
+}
+
+.dark-mode .about p:hover {
+  box-shadow: 0 8px 25px rgba(74, 144, 226, 0.25);
+}
+
+.light-mode .about p {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.dark-mode .about p {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Resaltar texto strong con gradiente */
+.about strong {
+  background: linear-gradient(90deg, #4a90e2, #90be6d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  position: relative;
 }
 
 /* Responsivo */
