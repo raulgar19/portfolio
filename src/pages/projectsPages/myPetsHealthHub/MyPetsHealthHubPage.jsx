@@ -4,22 +4,22 @@ import ProjectNavbar from "../../../components/projectNavbar/ProjectNavbar";
 import Footer from "../../../components/footer/Footer";
 import "./MyPetsHealthHubPage.css";
 
+const messages = [
+  "Loading Linux kernel...",
+  "Initializing hardware...",
+  "Starting system services...",
+  "Mounting filesystems...",
+  "[  OK  ] Started System Logging Service",
+  "[  OK  ] Started Network Manager",
+  "[  OK  ] Reached target Multi-User System",
+  "MyPetsHealthHub login: _",
+];
+
 function MyPetsHealthHubPage() {
   const { t } = useTranslation();
   const project = t("myPetsHealthHubPage", { returnObjects: true });
   const [showBoot, setShowBoot] = useState(true);
   const [bootMessages, setBootMessages] = useState([]);
-
-  const messages = [
-    "Loading Linux kernel...",
-    "Initializing hardware...",
-    "Starting system services...",
-    "Mounting filesystems...",
-    "[  OK  ] Started System Logging Service",
-    "[  OK  ] Started Network Manager",
-    "[  OK  ] Reached target Multi-User System",
-    "MyPetsHealthHub login: _",
-  ];
 
   useEffect(() => {
     let index = 0;
@@ -34,7 +34,7 @@ function MyPetsHealthHubPage() {
     }, 400);
 
     return () => clearInterval(interval);
-  }, [messages]);
+  }, []);
 
   return (
     <div className="mphh-page">
