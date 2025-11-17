@@ -81,15 +81,25 @@ function EchoPlayPage() {
         {/* Sección de imágenes */}
         <section className="echoplaypage-images">
           <div className="echoplay-images-container">
-            {project.images.map((img, index) => (
+            <div className="echoplay-images-row">
+              {project.images.slice(0, 3).map((img, index) => (
+                <img
+                  key={index}
+                  className={img.className}
+                  src={img.src}
+                  alt={img.alt}
+                  style={img.style || {}}
+                />
+              ))}
+            </div>
+            {project.images[3] && (
               <img
-                key={index}
-                className={img.className}
-                src={img.src}
-                alt={img.alt}
-                style={img.style || {}}
+                className={project.images[3].className}
+                src={project.images[3].src}
+                alt={project.images[3].alt}
+                style={project.images[3].style || {}}
               />
-            ))}
+            )}
           </div>
         </section>
 

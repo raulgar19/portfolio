@@ -7,7 +7,7 @@
   },
   "hero": {
     "name": "Raúl García Muñoz",
-    "subtitle": "Desarrollador Full Stack Web y Multiplataforma",
+    "subtitle": "Desarrollador Full Stack Web, Multiplataforma y Cloud",
     "github": "Github",
     "cv": "CV",
     "imageAlt": "Ilustración Hero"
@@ -372,7 +372,7 @@
   "echoPlayPage": {
     "title": "Echo Play",
     "description": {
-      "part1": "Echo Play es un ecosistema de aplicaciones diseñado para la gestión y reproducción de música dentro de una red local. Está compuesto por un servidor central y un total de tres aplicaciones cliente que se comunican con él.",
+      "part1": "Echo Play es un ecosistema de aplicaciones diseñado para la gestión y reproducción de música dentro de una red local. Está compuesto por un servidor central y un total de cuatro aplicaciones cliente que se comunican con él.",
       "part2": "Gracias a esta estructura modular, cada componente cumple un rol específico, garantizando una comunicación eficiente y una experiencia fluida tanto en escritorio como en dispositivos móviles."
     },
     "images": [
@@ -391,6 +391,11 @@
         "src": "/echoplay-manager.png",
         "alt": "Echo Play Manager",
         "className": "side-image"
+      },
+      {
+        "src": "/echoplay-desktop.png",
+        "alt": "Echo Play Desktop",
+        "className": "desktop-image"
       }
     ],
     "columns": [
@@ -401,6 +406,16 @@
           {
             "label": "Repositorio",
             "href": "https://github.com/raulgar19/EchoPlayFrontend"
+          }
+        ]
+      },
+      {
+        "title": "EchoPlay Desktop",
+        "description": "Aplicación de escritorio desarrollada en Electron para Windows que actúa como reproductor principal, ofreciendo la misma funcionalidad que la app móvil pero optimizada para PC.",
+        "buttons": [
+          {
+            "label": "Repositorio",
+            "href": "https://github.com/raulgar19/EchoPlayDesktop"
           }
         ]
       },
