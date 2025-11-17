@@ -58,6 +58,18 @@
           }
         },
         {
+          "name": "TypeScript",
+          "img": "typescript.png",
+          "alt": "TypeScript",
+          "style": {
+            "borderRadius": 10,
+            "marginTop": 10,
+            "marginBottom": 12,
+            "width": 65,
+            "height": 65
+          }
+        },
+        {
           "name": "JavaScript",
           "img": "javascript.png",
           "alt": "JavaScript",
@@ -92,6 +104,18 @@
             "borderRadius": 10,
             "marginTop": 10,
             "marginBottom": 18,
+            "width": 65,
+            "height": 65
+          }
+        },
+        {
+          "name": "DJango",
+          "img": "django.png",
+          "alt": "DJango",
+          "style": {
+            "borderRadius": 10,
+            "marginTop": 10,
+            "marginBottom": 12,
             "width": 65,
             "height": 65
           }
@@ -184,9 +208,33 @@
         { "name": "DBeaver", "img": "dbeaver.png", "alt": "DBeaver" },
         { "name": "Postman", "img": "postman.png", "alt": "Postman" },
         {
-          "name": "Microsoft PowerApps",
-          "img": "powerapps.png",
-          "alt": "Microsoft PowerApps",
+          "name": "Microsoft Power Platform",
+          "img": "powerplatform.png",
+          "alt": "Microsoft Power Platform",
+          "style": {
+            "borderRadius": 10,
+            "marginTop": 10,
+            "marginBottom": 18,
+            "width": 61,
+            "height": 61
+          }
+        },
+        {
+          "name": "Microsoft Azure",
+          "img": "azure.png",
+          "alt": "Microsoft Azure",
+          "style": {
+            "borderRadius": 10,
+            "marginTop": 10,
+            "marginBottom": 18,
+            "width": 61,
+            "height": 61
+          }
+        },
+        {
+          "name": "Amazon Web Services",
+          "img": "aws.png",
+          "alt": "Amazon Web Services",
           "style": {
             "borderRadius": 10,
             "marginTop": 10,
