@@ -1,0 +1,92 @@
+.certifications {
+  padding: 4rem 2rem 0 2rem;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.certifications h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  transition: color 0.3s ease;
+}
+
+/* Subrayado animado del título */
+.certifications h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #6a1b9a, #00bfa5);
+  border-radius: 2px;
+  animation: expandWidth 1.5s ease;
+}
+
+@keyframes expandWidth {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80px;
+  }
+}
+
+/* Cambiar color según modo */
+.light-mode .certifications h2 {
+  color: #000;
+}
+
+.dark-mode .certifications h2 {
+  color: #fff;
+}
+
+.certification-image {
+  width: 100%;
+  max-width: 1100px;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  object-fit: contain;
+  margin: 0 auto 15px;
+}
+
+.certification-year {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.light-mode .certification-year {
+  color: #000;
+}
+
+.dark-mode .certification-year {
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .certifications {
+    padding: 3rem 1rem 0 1rem;
+  }
+
+  .certifications h2 {
+    font-size: 1.75rem;
+  }
+
+  .certification-image {
+    max-width: 500px;
+  }
+
+  .certification-year {
+    font-size: 1.2rem;
+  }
+}

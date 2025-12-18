@@ -3,6 +3,7 @@
     "about": "About Me",
     "projects": "Projects",
     "skills": "Skills",
+    "certifications": "Certifications",
     "contact": "Contact"
   },
   "hero": {
@@ -36,6 +37,20 @@
       "title": "EchoPlay",
       "description": "Personal music streaming project similar to Spotify: allows creating playlists, playing songs, and managing music interactively."
     }
+  },
+  "certifications": {
+    "title": "Certifications",
+    "viewCertificate": "View Certificate",
+    "items": [
+      {
+        "name": "Microsoft Power Platform Developer (PL-400)",
+        "issuer": "Microsoft",
+        "date": "2024",
+        "description": "Official Microsoft certification for developing solutions with Power Platform.",
+        "image": "/pl400.png",
+        "url": ""
+      }
+    ]
   },
   "skills": {
     "title": "Skills",

@@ -34,6 +34,9 @@ const Navbar = () => {
           <a href="#skills">{t("navbar.skills")}</a>
         </li>
         <li>
+          <a href="#certifications">{t("navbar.certifications")}</a>
+        </li>
+        <li>
           <a href="#contact">{t("navbar.contact")}</a>
         </li>
       </ul>
